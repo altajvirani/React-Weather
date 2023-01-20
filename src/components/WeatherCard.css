@@ -1,0 +1,148 @@
+.card {
+    margin: 0.7rem;
+    padding: 1rem 1.2rem;
+    width: 100%;
+    border: 0.1rem solid #90B7D4;
+    border-radius: 0.8rem;
+    background-color: #F4FAFF;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    outline: none;
+    border-radius: 0.5rem;
+    width: max-content;
+    height: max-content;
+}
+
+.regular {
+    font-family: Orbitron-Regular;
+}
+
+.bold {
+    font-family: Orbitron-Bold;
+}
+
+span {
+    font-size: 0.9rem;
+    color: #536083;
+}
+
+.city span,
+.temp {
+    font-size: 1.8rem;
+}
+
+.remove {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.3rem;
+}
+
+.remove-card {
+    border: 0.1rem solid #AFCCE3;
+    background-color: #D9E6F2;
+    padding: 0.55rem;
+}
+
+.remove-card-icon {
+    width: 1.3rem;
+}
+
+.cal {
+    border: 0.05rem solid #AFCCE3;
+    border-radius: 0.25rem;
+    background-color: #D9E6F2;
+    padding: 0;
+}
+
+.cal-icon {
+    margin: 0.3rem;
+    width: 0.6rem;
+}
+
+.time {
+    align-items: baseline;
+}
+
+.time span {
+    font-size: 0.9rem;
+    margin-left: -1rem;
+}
+
+.middle {
+    padding-top: 0.5rem;
+}
+
+.middle .col,
+.grid {
+    display: flex;
+    justify-content: center;
+}
+
+.temp {
+    margin-bottom: -0.5rem;
+}
+
+.weather-icon {
+    min-width: 2rem;
+    max-width: 10rem;
+}
+
+.highest-temp {
+    border: 0.1rem solid #C2A098;
+    background-color: #FFE7D7;
+    padding: 0.65rem;
+}
+
+.highest-temp-icon,
+.lowest-temp-icon {
+    width: 0.9rem;
+}
+
+.lower {
+    margin-top: 1.6rem;
+}
+
+.lower .icon {
+    width: max-content;
+}
+
+.lower span {
+    margin-left: -0.9rem;
+    justify-self: left;
+}
+
+.lower .highest-temp,
+.lower .highest-temp-icon,
+.lower .lowest-temp,
+.lower .lowest-temp-icon {
+    cursor: default;
+}
+
+.high {
+    color: #815252;
+}
+
+.lowest-temp {
+    border: 0.1rem solid #8CAECA;
+    background-color: #DBEFFF;
+    padding: 0.65rem;
+}
+
+.end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.show-details {
+    cursor: auto;
+    border: 0.1rem solid #AFCCE3;
+    background-color: #D9E6F2;
+    padding: 0.8rem;
+}
+
+.show-details-icon {
+    width: 0.75rem;
+}
