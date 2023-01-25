@@ -1,19 +1,22 @@
 .card {
-    margin: 0.7rem;
-    padding: 1rem 1.2rem;
+    padding: 1.1rem 1.8rem 0rem 1.8rem;
     width: 100%;
+    max-width: 23.5rem;
+    height: 100% -1.1rem;
     border: 0.1rem solid #90B7D4;
     border-radius: 0.8rem;
     background-color: #F4FAFF;
+    overflow: hidden;
 }
 
 button {
     display: flex;
     align-items: center;
+    justify-content: center;
     outline: none;
     border-radius: 0.5rem;
-    width: max-content;
-    height: max-content;
+    width: 2.6rem;
+    height: 2.6rem;
 }
 
 .regular {
@@ -29,46 +32,70 @@ span {
     color: #536083;
 }
 
+.upper {
+    display: flex;
+}
+
 .city span,
 .temp {
     font-size: 1.8rem;
 }
 
+.city span {
+    display: block;
+    max-width: 17rem;
+    margin: 0rem 0rem 0rem -0.7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0%;
+}
+
 .remove {
     display: flex;
+    align-items: flex-start;
     justify-content: flex-end;
-    margin-top: 0.3rem;
+    width: max-content;
+    padding: 0;
 }
 
 .remove-card {
     border: 0.1rem solid #AFCCE3;
     background-color: #D9E6F2;
     padding: 0.55rem;
+    width: max-content;
 }
 
 .remove-card-icon {
+    rotate: 45deg;
     width: 1.3rem;
-}
-
-.cal {
-    border: 0.05rem solid #AFCCE3;
-    border-radius: 0.25rem;
-    background-color: #D9E6F2;
-    padding: 0;
-}
-
-.cal-icon {
-    margin: 0.3rem;
-    width: 0.6rem;
 }
 
 .time {
     align-items: baseline;
 }
 
+.cal {
+    border: 0.05rem solid #AFCCE3;
+    border-radius: 0.25rem;
+    background-color: #D9E6F2;
+    padding: 0.3rem;
+    margin-left: -0.7rem;
+    width: max-content;
+    height: max-content;
+}
+
+.cal-icon {
+    width: 0.6rem;
+}
+
 .time span {
     font-size: 0.9rem;
     margin-left: -1rem;
+}
+
+.time .col-1 {
+    width: max-content;
 }
 
 .middle {
@@ -86,14 +113,14 @@ span {
 }
 
 .weather-icon {
-    min-width: 2rem;
-    max-width: 10rem;
+    max-width: 9rem;
+    /* max-width: 10rem; */
+    margin: 1.2rem 0rem 1.2rem 0rem;
 }
 
 .highest-temp {
     border: 0.1rem solid #C2A098;
     background-color: #FFE7D7;
-    padding: 0.65rem;
 }
 
 .highest-temp-icon,
@@ -102,7 +129,12 @@ span {
 }
 
 .lower {
+    display: flex;
     margin-top: 1.6rem;
+}
+
+.lower .col-1 {
+    padding: 0%;
 }
 
 .lower .icon {
@@ -110,8 +142,11 @@ span {
 }
 
 .lower span {
-    margin-left: -0.9rem;
     justify-self: left;
+}
+
+.lower button {
+    margin-bottom: 1rem;
 }
 
 .lower .highest-temp,
@@ -140,7 +175,8 @@ span {
     cursor: auto;
     border: 0.1rem solid #AFCCE3;
     background-color: #D9E6F2;
-    padding: 0.8rem;
+    rotate: 0deg;
+    padding: 0.8rem 1.1rem 0.8rem 0.8rem;
 }
 
 .show-details-icon {

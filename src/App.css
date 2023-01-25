@@ -2,16 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.6rem;
 }
 
 .upper-nav {
     width: calc(100vw - 1rem);
     min-width: 100%;
-    overflow: auto;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     background-color: #F1F2F6;
@@ -23,7 +23,6 @@ input,
 .search-btn {
     border: 0.1rem solid #C0C5CF;
     border-radius: 0.8rem;
-    padding: 0.8rem 1rem 0.8rem 1rem;
     color: #798197;
 }
 
@@ -31,6 +30,10 @@ input {
     font-family: Orbitron-Regular;
     font-size: 0.9rem;
     margin-right: 0.8rem;
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    width: 100%;
+    max-width: 16rem;
+    min-width: none;
 }
 
 ::placeholder {

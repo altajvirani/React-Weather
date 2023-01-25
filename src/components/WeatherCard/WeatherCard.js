@@ -2,22 +2,47 @@ import './WeatherCard.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import React, { useState, useEffect } from "react"
-import axios from "axios"
+import React from "react"
 
-function WeatherCard({ city }) {
-    const date = new Date()
-    const [weath, setWeather] = useState({})
-    useEffect(() => {
-        async function fetchWeather() {
-            const response = await axios.get(
-                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c05eb6dc52a4edab7f0d97848b95a5fa`
-            )
-            setWeather(response.data)
-            console.log(response.data)
-        }
-        fetchWeather()
-    }, [city])
+function WeatherCard({ date, city, weath }) {
+    let icon_url;
+    const weathDesc = weath.weather[0]
+    switch (weathDesc['main'].toLowerCase()) {
+        case 'thunderstorm':
+            if (weathDesc['description'] === 'thunderstorm')
+                icon_url = require('./weather_icons/thunderstorms.png')
+            else
+                icon_url = require('./weather_icons/heavy_showers.png')
+            break
+        case 'drizzle':
+        case 'rain':
+            icon_url = require('./weather_icons/rain.png')
+            break
+        case 'snow':
+            if (weathDesc['description'] === 'Heavy snow' || weathDesc['description'] === 'Heavy shower snow')
+                icon_url = require('./weather_icons/heavy_snow.png')
+            else
+                icon_url = require('./weather_icons/snow.png')
+            break
+        case 'mist':
+        case 'dust':
+        case 'smoke':
+        case 'haze':
+        case 'fog':
+        case 'ash':
+        case 'squal':
+        case 'tornado':
+            icon_url = require('./weather_icons/mist_fog_smoke_haze.png')
+            break
+        case 'clouds':
+            if (weathDesc['description'] === 'few clouds')
+                icon_url = require('./weather_icons/partly_clouded_day.png')
+            else
+                icon_url = require('./weather_icons/clouded.png')
+            break
+        default:
+            icon_url = require('./weather_icons/clear_day.png')
+    }
 
     return (
         <div>
@@ -37,7 +62,7 @@ function WeatherCard({ city }) {
                                     </Col>
                                 </Row>
                                 <Row className="time">
-                                    <Col className="col-1" style={{ width: "max-content" }}>
+                                    <Col className="col-1">
                                         <button className="cal">
                                             <img className="cal-icon" src="./assets/cal_icon.png" alt="calendar" />
                                         </button>
@@ -50,7 +75,7 @@ function WeatherCard({ city }) {
                         </Row>
                         <Row className="middle">
                             <Col>
-                                <img className="weather-icon" src="./assets/sunny.png" alt="weather-logo" />
+                                <img className="weather-icon" src={icon_url} alt="weather-logo" />
                             </Col>
                             <div className='grid'>
                                 <span className="temp bold">{(weath.main.temp - 273.15).toFixed(0) + "° C"}</span>
